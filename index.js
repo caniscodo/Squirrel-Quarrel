@@ -18,6 +18,9 @@ const tryAgainBtn = document.getElementById('tryAgainBtn');
 const highscoreScreen = document.getElementById('highestScore');
 const gameOverScreen = document.getElementById('gameOverScreen');
 const startGame = document.getElementById('startGame');
+const credits = document.getElementById('credits');
+const creditsBtn = document.getElementById('creditsBtn');
+const goBackBtn = document.getElementById('goBackToHomeScreen');
 const backgroundAudio = new Audio('./assets/MusicAndSounds/bestbuddies.mp3');
 const jumpingSound = new Audio('./assets/MusicAndSounds/Jumping.mp3');
 const youPopped = new Audio('./assets/MusicAndSounds/duunk.mp3');
@@ -44,17 +47,25 @@ backgroundAudio.loop = true;
 
 
 
-//STARTS THE GAME WITH THE START GAME BUTTON
+//BUTTONS ON THE HOME SCREEN
 startGameBtn.addEventListener('click', function(){
   animate();
   startGame.style.display = "none";
   gameOverScreen.style.display = "none";
+  showCredits.style.display = "none";
 })
 
-creditsBtn.addEventListener('click', function () {
+creditsBtn.addEventListener('click', function(){
   startGame.style.display = "none";
   gameOverScreen.style.display = "none";
- });
+  showCredits.style.display = "block";
+})
+
+goBackBtn.addEventListener('click', function () {
+  startGame.style.display = "block";
+  gameOverScreen.style.display = "none";
+  showCredits.style.display = "none";
+})
 
 //GENERATES RANDOM NUMBERS BETWEEN MIN AND MAX
 function getRandomNumber(min, max) {
@@ -256,6 +267,7 @@ tryAgainBtn.addEventListener('click', function () {
   //RESET ALL CSS AND HTML CONTENT
   startGame.style.display = "none";
   gameOverScreen.style.display = "none";
+  showCredits.style.display = "none";
 
   //RESET AUDIO
   backgroundAudio.currentTime = 0;

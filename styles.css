@@ -86,7 +86,44 @@ span {
     background-color: white;
     background-image: url('./assets/StartScreen.png');
     position: absolute;
-    margin: 0% auto 0% auto;
+    margin: 2% auto 2.0% auto;
+}
+
+#showCredits {
+    display: none;
+    width: 1000px;
+    height: 550px;
+    background-color: white;
+    background-image: url('./assets/Credits.png');
+    position: absolute;
+    margin: 2% auto 2.0% auto;
+}
+
+#goBackToHomeScreen {
+    position: absolute;
+    background-color: grey;
+    font-family: 'actionJ';
+    outline: none;
+    color: black;
+    border: 3px solid white !important;
+    border: none;
+    border-radius: 10px;
+    font-size: 36px;
+    cursor: pointer;
+    margin: 2%;
+    padding: 5px;
+    box-shadow: black 5px 5px;
+}
+
+#goBackToHomeScreen:hover {
+    color: white;
+    background-color: #f78f3a;
+    box-shadow: #df6e11 0 -6px 8px inset;
+    transform: scale(1.125);
+}
+
+#goBackToHomeScreen {
+    transform: scale(1.025);
 }
 
 #creditsBtn {
