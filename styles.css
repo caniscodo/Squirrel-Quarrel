@@ -2,11 +2,19 @@
     background-color: rgb(48, 48, 48);
 }
 
+canvas {
+    display: block;
+    border: solid black;
+}
+
+html {
+    height: 100%;
+}
+
 @font-face {
     font-family: "actionJ";
     src: url("./assets/action-jackson/actionj.ttf") format('truetype');
 }
-
 
 h1 {
     display: flex;
@@ -21,6 +29,23 @@ h1 {
     margin: 1% 20% 2% 20%;
 }
 
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#startGame {
+    width: 1000px;
+    height: 550px;
+    background-color: white;
+    background-image: url('./assets/StartScreen.png');
+    position: absolute;
+    margin: 0% auto 0% auto;
+}
 
 #startGameBtn {
     display: flex;
@@ -51,22 +76,22 @@ h1 {
     transform: scale(1.025);
 }
 
-
-#highestScore {
-    background: transparent;
+#highestScoreText {
+    border: solid white 1px;
+    font-family: 'actionJ';
+    font-size: 30px;
+    /* background: transparent; */
     border-radius: 5px;
     color: white;
     text-shadow: 2px 2px black;
     display: flex;
-    font-size: 30px;
-    font-family: 'actionJ';
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
     margin-top: 30% 50% 30% 50%;
-
 }
-
 
 span {
     background: transparent;
@@ -77,53 +102,6 @@ span {
     justify-content: center;
     align-items: center;
     padding: 5px 10px 5px 20px;
-
-}
-
-#startGame {
-    width: 1000px;
-    height: 550px;
-    background-color: white;
-    background-image: url('./assets/StartScreen.png');
-    position: absolute;
-    margin: 2% auto 2.0% auto;
-}
-
-#showCredits {
-    display: none;
-    width: 1000px;
-    height: 550px;
-    background-color: white;
-    background-image: url('./assets/Credits.png');
-    position: absolute;
-    margin: 2% auto 2.0% auto;
-}
-
-#goBackToHomeScreen {
-    position: absolute;
-    background-color: grey;
-    font-family: 'actionJ';
-    outline: none;
-    color: black;
-    border: 3px solid white !important;
-    border: none;
-    border-radius: 10px;
-    font-size: 36px;
-    cursor: pointer;
-    margin: 2%;
-    padding: 5px;
-    box-shadow: black 5px 5px;
-}
-
-#goBackToHomeScreen:hover {
-    color: white;
-    background-color: #f78f3a;
-    box-shadow: #df6e11 0 -6px 8px inset;
-    transform: scale(1.125);
-}
-
-#goBackToHomeScreen {
-    transform: scale(1.025);
 }
 
 #creditsBtn {
@@ -152,6 +130,43 @@ span {
 }
 
 #creditsBtn:active {
+    transform: scale(1.025);
+}
+
+#showCredits {
+    display: none;
+    width: 1000px;
+    height: 550px;
+    background-color: white;
+    background-image: url('./assets/Credits.png');
+    position: absolute;
+    margin: 2% auto 2.0% auto;
+}
+
+#goBackBtn {
+    position: absolute;
+    background-color: grey;
+    font-family: 'actionJ';
+    outline: none;
+    color: black;
+    border: 3px solid white !important;
+    border: none;
+    border-radius: 10px;
+    font-size: 36px;
+    cursor: pointer;
+    margin: 2%;
+    padding: 5px;
+    box-shadow: black 5px 5px;
+}
+
+#goBackBtn:hover {
+    color: white;
+    background-color: #f78f3a;
+    box-shadow: #df6e11 0 -6px 8px inset;
+    transform: scale(1.125);
+}
+
+#goBackBtn {
     transform: scale(1.025);
 }
 
@@ -186,20 +201,3 @@ span {
     transform: scale(1.025);
 }
 
-
-canvas {
-    display: block;
-    border: solid black;
-}
-
-html {
-    height: 100%;
-}
-
-#wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
