@@ -1,0 +1,217 @@
+* {
+    background-color: rgb(48, 48, 48);
+}
+
+canvas {
+    display: block;
+    border: solid black;
+}
+
+html {
+    height: 100%;
+}
+
+@font-face {
+    font-family: "actionJ";
+    src: url("./assets/action-jackson/actionj.ttf") format('truetype');
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'actionJ';
+    font-size: 60px;
+    color: black;
+    background-color: #f2a55a;
+    border: solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 1% 20% 2% 20%;
+}
+
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#startGame {
+    width: 1000px;
+    height: 550px;
+    background-color: white;
+    background-image: url('./assets/StartScreen.png');
+    position: absolute;
+    margin: 0% auto 0% auto;
+}
+
+#startGameBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2a55a;
+    outline: none;
+    color: black;
+    font-family: 'actionJ';
+    border: 3px solid white !important;
+    border: none;
+    padding: 1% 3% 1% 3%;
+    border-radius: 10px;
+    font-size: 36px;
+    margin: 30% 2% 0 60%;
+    box-shadow: black 5px 5px;
+    cursor: pointer;
+}
+
+#startGameBtn:hover {
+    color: white;
+    background-color: #f78f3a;
+    box-shadow: #df6e11 0 -6px 8px inset;
+    transform: scale(1.125);
+}
+
+#startGameBtn:active {
+    transform: scale(1.025);
+}
+
+#highestScoreText {
+    border: solid white 1px;
+    font-family: 'actionJ';
+    font-size: 30px;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 2px 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin-top: 30% 50% 30% 50%;
+}
+
+#highestScore {
+    font-family: 'actionJ';
+    font-size: 30px;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 2px 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin-top: 30% 50% 30% 50%;
+}
+
+span {
+    background: transparent;
+    border-radius: 20px;
+    display: flex;
+    font-size: 30px;
+    font-family: 'actionJ';
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px 5px 20px;
+}
+
+#creditsBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    font-family: 'actionJ';
+    outline: none;
+    color: black;
+    border: 3px solid white !important;
+    border: none;
+    border-radius: 10px;
+    font-size: 36px;
+    cursor: pointer;
+    padding: 1% 3% 1% 3%;
+    margin: 1% 2% 0 65%;
+    box-shadow: black 5px 5px;
+}
+
+#creditsBtn:hover {
+    color: white;
+    background-color: #f78f3a;
+    box-shadow: #df6e11 0 -6px 8px inset;
+    transform: scale(1.125);
+}
+
+#creditsBtn:active {
+    transform: scale(1.025);
+}
+
+#showCredits {
+    display: none;
+    width: 1000px;
+    height: 550px;
+    background-color: white;
+    background-image: url('./assets/Credits.png');
+    position: absolute;
+    margin: 2% auto 2.0% auto;
+}
+
+#goBackBtn {
+    position: absolute;
+    background-color: grey;
+    font-family: 'actionJ';
+    outline: none;
+    color: black;
+    border: 3px solid white !important;
+    border: none;
+    border-radius: 10px;
+    font-size: 36px;
+    cursor: pointer;
+    margin: 2%;
+    padding: 5px;
+    box-shadow: black 5px 5px;
+}
+
+#goBackBtn:hover {
+    color: white;
+    background-color: #f78f3a;
+    box-shadow: #df6e11 0 -6px 8px inset;
+    transform: scale(1.125);
+}
+
+#goBackBtn {
+    transform: scale(1.025);
+}
+
+#gameOverScreen {
+    position: absolute;
+    background: none;
+    background-color: none;
+    margin: 0% auto 0% auto;
+}
+
+#tryAgainBtn {
+    background-color: #e76e0c;
+    outline: none;
+    font-family: 'actionJ';
+    color: WHITE;
+    border: 3px solid white !important;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 10% 12% 0 18%;
+}
+
+#tryAgainBtn:hover {
+    background-color: #f78f3a;
+    box-shadow: #f2a55a 0 -6px 8px inset;
+    transform: scale(1.125);
+}
+
+#tryAgainBtn:active {
+    transform: scale(1.025);
+}
+
