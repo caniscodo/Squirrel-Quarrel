@@ -1,9 +1,8 @@
-export default class Obstacle {
-  constructor(gameWidth, gameHeight, ctx) {
-    this.gameWidth = canvas.width;
-    this.gameHeight = canvas.height;
-    this.ctx = ctx;
+import canvasProperties from "./canvasProperties.js";
 
+export default class Obstacle extends canvasProperties {
+  constructor(gameWidth, gameHeight, ctx) {
+    super(gameWidth, gameHeight, ctx)
     this.width = 200;
     this.height = 200;
     this.x = this.gameWidth - 100;
@@ -12,7 +11,7 @@ export default class Obstacle {
 
     //VAR. FOR GENERATING OBSTACLES
     this.allObstacles = new Array();
-    this.type = this.getRandomNumber(0, 10);
+    this.type = this.getRandomNumber(0, 8);
     this.allObstaclesNum = this.getRandomNumber(1, 2);
 
     //VAR. OBSTACLE ATTRIBUTES
@@ -82,19 +81,18 @@ export default class Obstacle {
   }
 
   throwCans() {
-      this.ctx.drawImage(
-        this.allObstacles[0],
-        200 * this.frameX,
-        0,
-        200,
-        this.height,
-        this.canX,
-        this.canY,
-        this.canWidth,
-        this.canHeight
-      );
-    }
-  
+    this.ctx.drawImage(
+      this.allObstacles[0],
+      200 * this.frameX,
+      0,
+      200,
+      this.height,
+      this.canX,
+      this.canY,
+      this.canWidth,
+      this.canHeight
+    );
+  }
 
   drawAllSolidObstacles() {
     //GNOME
