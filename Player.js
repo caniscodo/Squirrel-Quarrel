@@ -1,12 +1,12 @@
-export default class Player {
-  constructor(gameWidth, gameHeight, ctx, input) {
-    this.gameWidth = canvas.width;
-    this.gameHeight = canvas.height;
-    this.ctx = ctx;
+import canvasProperties from "./canvasProperties.js";
+
+export default class Player extends canvasProperties{
+  constructor(gameWidth, gameHeight, ctx) {
+    super(gameWidth, gameHeight, ctx)
     this.width = 360;
     this.height = 190;
     this.x = 0;
-    this.y = gameHeight - this.height;
+    this.y = this.gameHeight - this.height;
 
     this.isJumping = false;
     this.isGliding = false;
@@ -18,11 +18,10 @@ export default class Player {
     this.fps = 16;
     this.frameTimer = 0;
     this.frameInterval = 1000 / this.fps;
-    this.speed = 0; // 1 FOR RIGHT, -1 FOR LEFT (NOT YET NEEDED HERE);
+    this.speed = 0; // 1 FOR RIGHT, -1 FOR LEFT (NOT NEEDED HERE);
 
-    this.input = input;
     this.velocity = 0;
-    this.gravity = 1; //GRAVITY..LEAVES THE PLAYER WHERE HE BELONGS... ON THE X AXIS.
+    this.gravity = 1; //GRAVITY, sLEAVES THE PLAYER WHERE HE BELONGS... ON THE X AXIS.
 
     this.playerSprite = new Image();
     this.playerSprite.src = './assets/DarylWalkAndJump.png';
@@ -43,7 +42,7 @@ export default class Player {
     );
   }
 
-  update(input, obstacle) {
+  update() {
     // SPRITE ANIMATION
     if (this.frameTimer > this.frameInterval) {
       if (this.frameX >= this.maxFrame) {
@@ -67,8 +66,6 @@ export default class Player {
     if (this.isJumping) {
       if (this.grounded()) {
         this.velocity -= 60;
-      } else {
-        this.speed = 0;
       }
     }
 
@@ -103,6 +100,6 @@ export default class Player {
   }
 
   animate() {
-    Player.update(input);
+    Player.update();
   }
 }
